@@ -9,6 +9,6 @@ pip install -r requirements.txt
 
 ## Run the project 
 ```
-python PowertrainTracker.py
+python main.py
 ```
 
