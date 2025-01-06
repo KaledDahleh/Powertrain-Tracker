@@ -141,7 +141,7 @@ print("-------------------------------------------------------------")
 print(f"Total number of listings with 6-speed manual transmission: {len(with_manual_list)}")
 print(f"Total number of listings with automatic transmission: {len(without_manual_list)} ")
 print(f"Average price of listings with 6-speed manual transmission: ${avg_price_with_manual:.2f}")
-print(f"Average price of listings without 6-speed manual: ${avg_price_without_manual:.2f}")
+print(f"Average price of listings with automatic transmission: ${avg_price_without_manual:.2f}")
 print("-------------------------------------------------------------")
 
 
