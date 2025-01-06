@@ -161,6 +161,32 @@ print(f"Average price of listings with V8 and 6-speed manual transmission: ${avg
 print(f"Average price of listings with V8 and automatic transmission: ${avg_price_v8_without_manual:.2f}")
 print("-------------------------------------------------------------\n")
 
+print("-------------------------------------------------------------")
+print("ALL TIME HIGHS AND LOWS")
+print("-------------------------------------------------------------")
+
+
+print("MANUAL VS AUTOMATIC")
+print(f"Manual transmission lowest price: ${min(with_manual_prices):.2f}")
+print(f"Manual transmission highest price: ${max(with_manual_prices):.2f}")
+print(f"Automatic transmission lowest price: ${min(without_manual_prices):.2f}")
+print(f"Automatic transmission highest price: ${max(without_manual_prices):.2f}")
+print("-------------------------------------------------------------")
+
+print("V10 MANUAL VS V10 AUTOMATIC")
+print(f"V10 Manual transmission lowest price: ${min(v10_with_manual_prices):.2f}")
+print(f"V10 Manual transmission highest price: ${max(v10_with_manual_prices):.2f}")
+print(f"V10 Automatic transmission lowest price: ${min(v10_without_manual_prices):.2f}")
+print(f"V10 Automatic transmission highest price: ${max(v10_without_manual_prices):.2f}")
+print("-------------------------------------------------------------")
+
+print("V8 MANUAL VS V8 AUTOMATIC")
+print(f"V8 Manual transmission lowest price: ${min(v8_with_manual_prices):.2f}")
+print(f"V8 Manual transmission highest price: ${max(v8_with_manual_prices):.2f}")
+print(f"V8 Automatic transmission lowest price: ${min(v8_without_manual_prices):.2f}")
+print(f"V8 Automatic transmission highest price: ${max(v8_without_manual_prices):.2f}")
+print("-------------------------------------------------------------\n")
+
 #----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 driver.quit()
