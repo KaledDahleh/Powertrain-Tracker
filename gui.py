@@ -44,6 +44,27 @@ class AnalysisGUI:
         self.status_label = ttk.Label(self.status_frame, text="Ready")
         self.status_label.pack(side='left', padx=5)
 
+    def add_forecast_to_graph(self):
+        # Call API for predictions
+        api_url = "https://your-api-gateway-url/predict"
+        params = {
+            'transmission': 'manual',
+            'engine': 'v10'
+        }
+        
+        response = requests.get(api_url, params=params)
+        forecast_data = response.json()
+        
+        # Add forecast line to price trend graph
+        dates = [datetime.strptime(d, '%Y-%m-%d') for d in forecast_data['dates']]
+        predictions = forecast_data['predictions']
+        
+        self.price_trend_ax.plot(dates, predictions, 
+                                linestyle='--', 
+                                color='green', 
+                                label=f'Forecast (Accuracy: {forecast_data["accuracy"]:.1%})')
+        self.price_trend_ax.legend()
+
     def setup_summary_tab(self):
         # Create frames for different sections
         self.create_summary_section(self.summary_tab, "Manual vs Automatic Analysis", 0)
